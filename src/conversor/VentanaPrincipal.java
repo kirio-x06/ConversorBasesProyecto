@@ -3,6 +3,7 @@ package conversor;
 import javax.swing.*;
 import javax.swing.border.EmptyBorder;
 import java.awt.*;
+import com.formdev.flatlaf.FlatDarkLaf;
 
 public class VentanaPrincipal extends JFrame {
 
@@ -252,6 +253,7 @@ public class VentanaPrincipal extends JFrame {
     }
 
     public static void main(String[] args) {
+        FlatDarkLaf.setup();
         SwingUtilities.invokeLater(() -> {
             new VentanaPrincipal().setVisible(true);
         });

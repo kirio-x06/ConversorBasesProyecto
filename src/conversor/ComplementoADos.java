@@ -38,13 +38,23 @@ public class ComplementoADos {
      * FASE 3 - PASO A: Convierte un número decimal (positivo o negativo) a Complemento a 2 en N bits.
      */
     public String convertirAComplementoDos(long numero, int nBits, StringBuilder pasos) {
-        pasos.append("=== PASO A: Representación de ").append(numero).append(" en ").append(nBits).append(" bits (Ca2) ===\n");
+        pasos.append("=== PASO A: Representación de ")
+                .append(numero)
+                .append(" en ")
+                .append(nBits)
+                .append(" bits (Ca2) ===\n");
 
         // 1. Verificar Overflow de rango
         if (!verificarRango(numero, nBits)) {
-            pasos.append("ERROR DE OVERFLOW: El número ").append(numero)
-                    .append(" excede el rango representable para ").append(nBits).append(" bits: [")
-                    .append(getLimiteInferior(nBits)).append(" a ").append(getLimiteSuperior(nBits)).append("].\n");
+            pasos.append("ERROR DE OVERFLOW: El número ")
+                    .append(numero)
+                    .append(" excede el rango representable para ")
+                    .append(nBits)
+                    .append(" bits: [")
+                    .append(getLimiteInferior(nBits))
+                    .append(" a ")
+                    .append(getLimiteSuperior(nBits))
+                    .append("].\n");
             return null;
         }
 
@@ -52,11 +62,15 @@ public class ComplementoADos {
         if (numero >= 0) {
             pasos.append("1. Como el número es positivo (>= 0), convertimos a binario normal:\n");
             String binPuro = sistemaBinario.convertirDesdeDecimal(numero);
-            pasos.append("   Binario sin relleno: ").append(binPuro).append("\n");
-
+            pasos.append("   Binario sin relleno: ")
+                    .append(binPuro).append("\n");
             String binRelleno = rellenarConCeros(binPuro, nBits);
-            pasos.append("2. Rellenamos con ceros a la izquierda hasta ").append(nBits).append(" bits:\n");
-            pasos.append("   Resultado Ca2: ").append(binRelleno).append("\n\n");
+            pasos.append("2. Rellenamos con ceros a la izquierda hasta ")
+                    .append(nBits)
+                    .append(" bits:\n");
+            pasos.append("   Resultado Ca2: ")
+                    .append(binRelleno)
+                    .append("\n\n");
             return binRelleno;
         }
         // 3. Caso Negativo
