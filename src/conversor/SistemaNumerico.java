@@ -20,7 +20,7 @@ public abstract class SistemaNumerico {
         return nombreSistema;
     }
 
-    // Método abstracto que obliga a las subclases a definir cómo validan sus entradas (Polimorfismo)
+    // Método abstracto que obliga a las subclases a definir cómo validan sus entradas
     public abstract boolean validarEntrada(String numeroStr);
 
     /**
@@ -62,7 +62,7 @@ public abstract class SistemaNumerico {
     }
 
     /**
-     * Versión directa sin texto explicativo (útil para llamadas internas).
+     * Versión directa
      */
     public String convertirDesdeDecimal(long numeroDecimal) {
         return convertirDesdeDecimalConPasos(numeroDecimal, new StringBuilder());
@@ -119,7 +119,7 @@ public abstract class SistemaNumerico {
         return sumaTotal;
     }
 
-    // Método auxiliar manual para invertir un String sin usar librerías
+    // Método auxiliar manual para invertir un String
     protected String invertirCadena(String texto) {
         String invertida = "";
         for (int i = texto.length() - 1; i >= 0; i--) {
@@ -138,7 +138,7 @@ public abstract class SistemaNumerico {
         return -1;
     }
 
-    // Método auxiliar manual para calcular base^exponente sin Math.pow
+    // Método auxiliar manual para calcular base^exponente
     protected long calcularPotencia(int base, int exponente) {
         long resultado = 1;
         for (int i = 0; i < exponente; i++) {

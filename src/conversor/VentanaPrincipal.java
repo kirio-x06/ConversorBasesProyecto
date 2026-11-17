@@ -7,7 +7,7 @@ import com.formdev.flatlaf.FlatDarkLaf;
 
 public class VentanaPrincipal extends JFrame {
 
-    // Instancias de nuestras clases de lógica (Polimorfismo y Composición)
+
     private final SistemaNumerico sistemaBinario = new SistemaBinario();
     private final SistemaNumerico sistemaOctal = new SistemaOctal();
     private final SistemaNumerico sistemaHexadecimal = new SistemaHexadecimal();
@@ -120,7 +120,7 @@ public class VentanaPrincipal extends JFrame {
             String entrada = txtNumero.getText().trim().toUpperCase();
             int idx = comboOrigen.getSelectedIndex();
 
-            // Selección polimórfica del sistema numérico
+
             SistemaNumerico sistemaActual;
             if (idx == 0) sistemaActual = sistemaBinario;
             else if (idx == 1) sistemaActual = sistemaOctal;

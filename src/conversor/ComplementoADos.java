@@ -129,7 +129,7 @@ public class ComplementoADos {
     }
 
     /**
-     * FASE 4 (AVANZADO): Suma y Resta en Binario usando Complemento a 2.
+     * FASE 4: Suma y Resta en Binario usando Complemento a 2.
      */
     public String operarEnComplementoDos(long numA, long numB, boolean esResta, int nBits, StringBuilder pasos) {
         String operacionNombre = esResta ? "RESTA (A - B)" : "SUMA (A + B)";
@@ -190,7 +190,7 @@ public class ComplementoADos {
         char signoRes = resultadoSuma.charAt(0);
 
         if (signoA == signoB && signoRes != signoA) {
-            pasos.append("⚠️ ALERTA DE OVERFLOW ARITMÉTICO DETECTADO:\n");
+            pasos.append("ALERTA DE OVERFLOW ARITMÉTICO DETECTADO:\n");
             pasos.append("Ambos operandos tenían el mismo bit de signo ('").append(signoA)
                     .append("'), pero el resultado cambió su bit de signo a ('").append(signoRes).append("').\n");
             pasos.append("El resultado real (").append(numA + segundoOperando)
